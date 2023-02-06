@@ -16,15 +16,18 @@
                 <img class="img-thumbnail" src="https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Picture of a Red Barn at a Farm." width="450" height="300">
                 <p>Information about the farm collective thing</p>
             </div>
+            
             <div class="card col-8 d-inline-block">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card-head">
-                            <h3>Farm Information</h3>
-                        </div>
-                        <div class="card-body">
+                <div class=""> <!--This used to be a row class, unsure if it is needed still-->
+                    <div class="card-head col-12 text-center mb-2">
+                        <h3>Registration</h3>
+                    </div>
+                    <form>
+                        <div class="form-group row">
+                        <div class="card-body col-6">
+                            <h4>Farm Information</h4>
                             <label for="FarmID"class="form-label">Farm ID</label>
-                            <input type="number"id="FarmID" class="form-control">
+                            <input type=""id="FarmID" class="form-control">
                             <h4>OR</h4>
                             <label for="txtFarmName"class="form-label">Farm Name</label>
                             <input id="txtFarmName" class="form-control">
@@ -40,39 +43,37 @@
                             <input id="zipCode" class="form-control">
                          
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card-head">
-                            <h3>User Information</h3>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <label for="txtFirstName"class="form-label">First Name</label>
-                                <input id="firstName" class="form-control">
-                                <label for="txtLastName" class="form-label">Last Name</label>
-                                <input id="lastName" class="form-control">
-                                <label for="txtEmail" class="form-label">Email</label> 
-                                <input type="email" id= "txtEmail" class="form-control">
-                                <label for="txtPassword" class="form-label">Password</label> 
-                                <input type="password" id="txtPassword" class="form-control">
-                                <label for="txtMobileNumber" class="form-label">Mobile Number</label>
-                                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"class="form-control" id="txtMobileNumber">
+
+                        <div class="card-body col-6">
+                            <h4>User Information</h4>
+                            <label for="txtFirstName"class="form-label">First Name</label>
+                            <input id="firstName" class="form-control">
+                            <label for="txtLastName" class="form-label">Last Name</label>
+                            <input id="lastName" class="form-control">
+                            <label for="txtEmail" class="form-label">Email</label> 
+                            <input type="email" id= "txtEmail" class="form-control">
+                            <label for="txtPassword" class="form-label">Password</label> 
+                            <input type="password" id="txtPassword" class="form-control">
+                            <label for="txtMobileNumber" class="form-label">Mobile Number</label>
+                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"class="form-control" id="txtMobileNumber">
                                 <!--WORRY ABOUT THIS LATER-->
-                            </form>
                         </div>
-                        
-                    </div>
-                    <div class="d-flex justify-content-center mb-2">
+
+                        <div class="d-flex justify-content-center mb-2">
                         <button type="button" class="btn btn-success col-12" id="btnSubmit">Submit</button>
-                    </div>
-                    
+                        </div>
+                        </div>
+                    </form>
                 </div>
-                
+                    
+                    
             </div>
+                
+        </div>
             
             <!--</div class="col-1"><div> -->
-         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
