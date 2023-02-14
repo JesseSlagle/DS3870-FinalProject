@@ -9,9 +9,10 @@
 </head>
 <body class="" style="background: radial-gradient(circle, rgba(255,189,96,1) 18%, rgba(95,190,121,1) 100%);">
     <div class="container d-flex col-12 justify-content-center"> 
-                <div class="card col-6 d-flex align-content-center mt-5">
+                <div class="card col-12 col-md-8 d-flex align-content-center mt-5">
                     <div class="card-head text-center mb-2">
-                        <h3>Login</h3>
+                        <h3 class="text-success">&#9788; Plentifo Login</h3>
+                        <p class="fw-bold">Please Login or Click Register to Sign Up</p>
                     </div>
                     <form>
                         <div class="card-body">
@@ -21,9 +22,10 @@
                                 <label for="txtPassword"class="fw-bold form-label">Password</label>
                                 <input type="password"id="txtPassword" class="form-control">
                             </div>
-                            <div class="d-flex justify-content-center my-2">
-                                 <button type="button" class="btn btn-outline-success col-4 col-md-2 mx-1" id="btnRegister">Register</button>
-                                <button type="button" class="btn btn-success col-6 col-md-3" id="btnLogin">Login</button>
+                            <div class="d-xs-block d-lg-flex justify-content-center my-2">
+                                <a href="registration.html" class="btn btn-outline-success col-12 col-lg-4 mx-1 my-1" role="button">Register</a>
+                                <!--<button type="button" class="btn btn-outline-success col-4 col-md-2 mx-1" id="btnRegister">Register</button>--->
+                                <button type="button" class="btn btn-success col-12 col-lg-6 mx-1 my-1" id="btnLogin">Login</button>
                             </div>
                         </div>
                 </div>
@@ -35,5 +37,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
+    <script>
+          $('#btnLogin').click(function(){
+
+            let strSuccess = "Login Successful"
+            let strError = "Please enter the following:" ;
+            let emailError = "   Email"
+            let passwordError = "   Password"
+
+            let strEmail = $('#txtEmail').val();
+            console.log(strEmail)
+            let intEmailLength = $(txtEmail).val().length;
+            console.log(intEmailLength)
+
+            let strPassword = $('#txtPassword').val();
+            //console.log(strPassword)
+            let intPasswordLength = $(txtPassword).val().length;
+            //console.log(intPasswordLength)
+            
+            if (intEmailLength <1){
+                strError += emailError
+                console.log(strError)
+            }
+
+            if (intPasswordLength <1){
+                strError += passwordError
+                console.log(strError)
+            }
+
+            if (intEmailLength < 1 || intPasswordLength < 1){
+                alert(strError)
+            }
+
+            if (intEmailLength > 0 && intPasswordLength > 0){
+                alert(strSuccess)
+            }
+            
+
+            })
+    </script>
 </body>
 </html>
